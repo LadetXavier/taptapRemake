@@ -1,0 +1,19 @@
+.game-container {
+  display: flex;
+}
+
+.letter {
+  width: 1%;
+  //max-width: 30px;
+  border: 0.1em solid  black;
+  padding: 0.3em 0.1em;
+  text-align: center;
+}
+
+.letter-space {
+  border: 0px;
+}
+
+.letter-current {
+  background-color: green;
+}

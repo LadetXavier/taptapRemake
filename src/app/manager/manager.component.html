@@ -1,0 +1,18 @@
+<h1 class="main-title">Ready to train ?</h1>
+<main class="manager-container" (window:keydown)="onKeyType($event)">
+  <div class="option-container">
+
+  </div>
+  <div class="game-container" >
+    <div class="letter"
+    *ngFor="let letter of target;let i=index"
+    [class.letter-space]="letter === ' '"
+    [class.letter-current]="i === currentLetter"
+    >
+      {{letter}}
+    </div>
+
+  </div>
+  <input type="button" value="boy" (click)="testCurrentLetter('g')">
+
+</main>
