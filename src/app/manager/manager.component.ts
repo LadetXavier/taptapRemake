@@ -1,5 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+import { Target } from "../services/target.services";
+
+
 @Component({
   selector: 'app-manager',
   templateUrl: './manager.component.html',
@@ -7,10 +10,12 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ManagerComponent implements OnInit {
 
-  constructor() { }
+  constructor( private target: Target) {
+
+  }
 
 
-  target:string[] = [];
+  targetList:string[] = [];
   currentLetter:number = 0;
 
   onKeyType = (event:KeyboardEvent) => {
@@ -19,7 +24,7 @@ export class ManagerComponent implements OnInit {
   }
 
   testCurrentLetter = (letterToTest:string) => {
-    if(this.target[this.currentLetter]===letterToTest) {
+    if(this.targetList[this.currentLetter]===letterToTest) {
       this.nextLetter();
       return true;
     }
@@ -28,14 +33,13 @@ export class ManagerComponent implements OnInit {
 
   nextLetter= () => {
     this.currentLetter+=1;
-    if(this.target[this.currentLetter]===' ') {
-      this.currentLetter +=1;
-    }
   }
 
   ngOnInit(): void {
-    let tempString = "gdfgdg dgdfd gfdm qo iiie";
-    this.target= tempString.split('');
+    let tempString = "gDfgdg dgdfd gfdm qo iiie";
+    this.targetList= tempString.split('');
+    this.target.generateList(90);
+    this.targetList = this.target.listLetter;
   }
 
 }

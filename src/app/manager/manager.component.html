@@ -5,12 +5,15 @@
   </div>
   <div class="game-container" >
     <div class="letter"
-    *ngFor="let letter of target;let i=index"
+    *ngFor="let letter of targetList;let i=index"
     [class.letter-space]="letter === ' '"
     [class.letter-current]="i === currentLetter"
+    [class.letter-done]="i < currentLetter"
     >
       {{letter}}
-      <div class="space-holder" *ngIf="letter === ' '"></div>
+      <div class="space-holder" *ngIf="letter === ' '"
+      [class.space-current]="i === currentLetter"
+      ></div>
     </div>
   </div>
 

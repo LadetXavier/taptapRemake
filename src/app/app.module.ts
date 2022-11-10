@@ -4,13 +4,13 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LearningComponent } from './learning/learning.component';
+
 import { ManagerComponent } from './manager/manager.component';
+import { Target } from "./services/target.services";
 
 @NgModule({
   declarations: [
     AppComponent,
-    LearningComponent,
     ManagerComponent
   ],
   imports: [
@@ -18,7 +18,9 @@ import { ManagerComponent } from './manager/manager.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    Target
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
