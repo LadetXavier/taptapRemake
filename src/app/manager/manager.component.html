@@ -1,5 +1,5 @@
-<h1 class="main-title">Ready to train ?</h1>
 <main class="manager-container" (window:keydown)="onKeyType($event)">
+  <h1 class="main-title">Ready to train ?</h1>
   <div class="option-container">
 
   </div>
@@ -10,9 +10,9 @@
     [class.letter-current]="i === currentLetter"
     >
       {{letter}}
+      <div class="space-holder" *ngIf="letter === ' '"></div>
     </div>
-
   </div>
-  <input type="button" value="boy" (click)="testCurrentLetter('g')">
+
 
 </main>
