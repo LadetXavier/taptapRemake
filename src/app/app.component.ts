@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 
-import { Target } from "./services/target.services";
 
 @Component({
   selector: 'app-root',
@@ -9,7 +8,7 @@ import { Target } from "./services/target.services";
 })
 export class AppComponent {
   title = 'taptapRemake';
-  constructor ( private target:Target) {
+  constructor () {
 
   }
 

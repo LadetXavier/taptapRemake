@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { ManagerComponent } from './manager/manager.component';
-import { Target } from "./services/target.services";
+
+import { OptionComponent } from './option/option.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ManagerComponent
+    ManagerComponent,
+    OptionComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +21,6 @@ import { Target } from "./services/target.services";
     FormsModule
   ],
   providers: [
-    Target
   ],
   bootstrap: [AppComponent]
 })

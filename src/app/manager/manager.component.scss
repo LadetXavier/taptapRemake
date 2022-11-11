@@ -1,6 +1,6 @@
 $bg-letter: #282931;
 $bg-current-letter: rgb(94, 192, 94);
-
+$bg-current-letter-fail: red;
 
 .game-container {
   display: flex;
@@ -23,6 +23,10 @@ $bg-current-letter: rgb(94, 192, 94);
   text-align: center;
   font-size: 2em;
   background-color: $bg-letter;
+}
+
+.letter-fail.letter {
+  color: $bg-current-letter-fail;
 }
 
 .letter-done {
@@ -50,16 +54,28 @@ $bg-current-letter: rgb(94, 192, 94);
   height: 0;
 }
 
-
-
 .letter-current {
   color: $bg-current-letter;
   animation: blinker 1s step-end infinite;
 }
 
+.letter-current-fail {
+  color: $bg-current-letter-fail;
+  animation: blinkerFail 1s step-end infinite;
+}
+
 @keyframes blinker {
   50% {
     background-color: $bg-current-letter;
+    border-radius: 10%;
+    color: white;
+  }
+
+}
+
+@keyframes blinkerFail {
+  50% {
+    background-color: $bg-current-letter-fail;
     border-radius: 10%;
     color: white;
   }

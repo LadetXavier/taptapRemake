@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-
-import { Target } from "../services/target.services";
+import { ListManagerService, ListProperty } from '../list-manager.service';
 
 
 @Component({
@@ -10,13 +9,16 @@ import { Target } from "../services/target.services";
 })
 export class ManagerComponent implements OnInit {
 
-  constructor( private target: Target) {
+  constructor( private listManager: ListManagerService) {
+
 
   }
 
+  listManagerProperty: ListProperty | any = {};
 
-  targetList:string[] = [];
-  currentLetter:number = 0;
+  ngOnInit(): void {
+    this.listManagerProperty = this.listManager.listProperty;
+  }
 
   onKeyType = (event:KeyboardEvent) => {
 
@@ -24,22 +26,21 @@ export class ManagerComponent implements OnInit {
   }
 
   testCurrentLetter = (letterToTest:string) => {
-    if(this.targetList[this.currentLetter]===letterToTest) {
+    if(this.listManagerProperty.listLetter[this.listManagerProperty.currentLetter]===letterToTest) {
       this.nextLetter();
+      this.listManagerProperty.isFailing = false;
       return true;
     }
-    else return false;
+    else {
+      this.listManagerProperty.isFailing = true;
+      return false;
+    }
   }
 
   nextLetter= () => {
-    this.currentLetter+=1;
+    this.listManagerProperty.currentLetter+=1;
   }
 
-  ngOnInit(): void {
-    let tempString = "gDfgdg dgdfd gfdm qo iiie";
-    this.targetList= tempString.split('');
-    this.target.generateList(90);
-    this.targetList = this.target.listLetter;
-  }
+
 
 }

@@ -1,18 +1,17 @@
 <main class="manager-container" (window:keydown)="onKeyType($event)">
   <h1 class="main-title">Ready to train ?</h1>
-  <div class="option-container">
-
-  </div>
+  <app-option></app-option>
   <div class="game-container" >
     <div class="letter"
-    *ngFor="let letter of targetList;let i=index"
+    *ngFor="let letter of listManagerProperty.listLetter;let i=index"
     [class.letter-space]="letter === ' '"
-    [class.letter-current]="i === currentLetter"
-    [class.letter-done]="i < currentLetter"
+    [class.letter-current]="i === listManagerProperty.currentLetter && !listManagerProperty.isFailing"
+    [class.letter-current-fail]=" i === listManagerProperty.currentLetter && listManagerProperty.isFailing"
+    [class.letter-done]="i < listManagerProperty.currentLetter"
     >
       {{letter}}
       <div class="space-holder" *ngIf="letter === ' '"
-      [class.space-current]="i === currentLetter"
+      [class.space-current]="i === listManagerProperty.currentLetter"
       ></div>
     </div>
   </div>
