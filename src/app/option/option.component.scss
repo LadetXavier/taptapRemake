@@ -1,0 +1,465 @@
+
+
+.keyboard-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(60, 1.7777%);
+  grid-template-rows: repeat(20, 5%);
+  aspect-ratio: 60/20;
+
+}
+
+.kb-norm {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kb-maj {
+  display: none;
+}
+
+
+
+
+@mixin kb-row($row) {
+  grid-row: calc($row * 4 - 3)/span 3;
+}
+
+@mixin kb-main-key {
+  background-color: red;
+  border: 1px solid black;
+}
+
+@mixin kb-secondary-key {
+  background-color: grey;
+  border: 1px solid white;
+
+}
+// First row
+.kb-expo {
+  @include kb-row(1);
+  @include kb-secondary-key();
+  grid-column: 1 / span 3;
+}
+
+.kb-1 {
+  @include kb-row(1);
+  @include kb-main-key();
+
+  grid-column: 5 / span 3;
+}
+.kb-2 {
+  @include kb-row(1);
+  @include kb-main-key();
+
+  grid-column: 9 / span 3;
+}
+.kb-3 {
+  @include kb-row(1);
+  @include kb-main-key();
+
+  grid-column: 13 / span 3;
+}
+.kb-4 {
+  @include kb-row(1);
+  @include kb-main-key();
+
+  grid-column: 17 / span 3;
+}
+.kb-5 {
+  @include kb-row(1);
+  @include kb-main-key();
+
+  grid-column: 21 / span 3;
+}
+.kb-6 {
+  @include kb-row(1);
+  @include kb-main-key();
+
+  grid-column: 25 / span 3;
+}
+.kb-7 {
+  @include kb-row(1);
+  @include kb-main-key();
+
+  grid-column: 29 / span 3;
+}
+.kb-8 {
+  @include kb-row(1);
+  @include kb-main-key();
+
+  grid-column: 33 / span 3;
+}
+.kb-9 {
+  @include kb-row(1);
+  @include kb-main-key();
+
+  grid-column: 37 / span 3;
+}
+
+.kb-0 {
+  @include kb-row(1);
+  @include kb-main-key();
+
+  grid-column: 41 / span 3;
+}
+
+.kb-close-par {
+  @include kb-row(1);
+  @include kb-main-key();
+
+  grid-column: 45 / span 3;
+}
+
+.kb-equal {
+  @include kb-row(1);
+  @include kb-main-key();
+
+  grid-column: 49 / span 3;
+}
+
+.kb-back {
+  @include kb-row(1);
+  @include kb-secondary-key();
+
+  grid-column: 53 / span 7;
+}
+
+
+// Second Row
+
+.kb-tab {
+  @include kb-row(2);
+  @include kb-secondary-key();
+
+  grid-column: 1 / span 5;
+}
+
+.kb-A {
+  @include kb-row(2);
+  @include kb-main-key();
+
+  grid-column: 7 / span 3;
+}
+
+.kb-Z {
+  @include kb-row(2);
+  @include kb-main-key();
+
+  grid-column: 11 / span 3;
+}
+.kb-E {
+  @include kb-row(2);
+  @include kb-main-key();
+
+  grid-column: 15 / span 3;
+}
+.kb-R {
+  @include kb-row(2);
+  @include kb-main-key();
+
+  grid-column: 19 / span 3;
+}
+.kb-T {
+  @include kb-row(2);
+  @include kb-main-key();
+
+  grid-column: 23 / span 3;
+}
+.kb-Y {
+  @include kb-row(2);
+  @include kb-main-key();
+
+  grid-column: 27 / span 3;
+}
+.kb-U {
+  @include kb-row(2);
+  @include kb-main-key();
+
+  grid-column: 31 / span 3;
+}
+.kb-I {
+  @include kb-row(2);
+  @include kb-main-key();
+
+  grid-column: 35 / span 3;
+}
+
+.kb-O {
+  @include kb-row(2);
+  @include kb-main-key();
+
+  grid-column: 39 / span 3;
+}
+.kb-P {
+  @include kb-row(2);
+  @include kb-main-key();
+
+  grid-column: 43 / span 3;
+}
+.kb-chapo {
+  @include kb-row(2);
+  @include kb-main-key();
+
+  grid-column: 47 / span 3;
+}
+.kb-dolls {
+  @include kb-row(2);
+  @include kb-main-key();
+
+  grid-column: 51 / span 3;
+}
+.kb-enter-upper {
+  @include kb-secondary-key();
+  @include kb-row(2);
+
+  grid-column: 55 / span 5;
+}
+
+// third Row
+
+.kb-caps {
+  @include kb-row(3);
+  @include kb-secondary-key();
+
+  grid-column: 1 / span 6;
+}
+
+.kb-Q {
+  @include kb-row(3);
+  @include kb-main-key();
+
+  grid-column: 8 / span 3;
+}
+.kb-S {
+  @include kb-row(3);
+  @include kb-main-key();
+
+  grid-column: 12 / span 3;
+}
+.kb-D {
+  @include kb-row(3);
+  @include kb-main-key();
+
+  grid-column: 16 / span 3;
+}
+.kb-F {
+  @include kb-row(3);
+  @include kb-main-key();
+
+  grid-column: 20 / span 3;
+}
+.kb-G {
+  @include kb-row(3);
+  @include kb-main-key();
+
+  grid-column: 24 / span 3;
+}
+.kb-H {
+  @include kb-row(3);
+  @include kb-main-key();
+
+  grid-column: 28 / span 3;
+}
+.kb-J {
+  @include kb-row(3);
+  @include kb-main-key();
+
+  grid-column: 32 / span 3;
+}
+.kb-K {
+  @include kb-row(3);
+  @include kb-main-key();
+
+  grid-column: 36 / span 3;
+}
+.kb-L {
+  @include kb-row(3);
+  @include kb-main-key();
+
+  grid-column: 40 / span 3;
+}
+.kb-M {
+  @include kb-row(3);
+  @include kb-main-key();
+
+  grid-column: 44 / span 3;
+}
+.kb-pourcent {
+  @include kb-row(3);
+  @include kb-main-key();
+
+  grid-column: 48 / span 3;
+}
+
+.kb-asterix {
+  @include kb-row(3);
+  @include kb-main-key();
+
+  grid-column: 52 / span 3;
+}
+
+.kb-enter-lower {
+
+  @include kb-secondary-key();
+
+  grid-column: 56 / span 4;
+  grid-row: 8 / span 4;
+}
+
+// fourth row
+
+.kb-left-shift {
+  @include kb-row(4);
+  @include kb-secondary-key();
+
+  grid-column: 1 / span 3;
+}
+
+.kb-greater {
+  @include kb-row(4);
+  @include kb-main-key();
+
+  grid-column: 5 / span 3;
+}
+
+.kb-W {
+  @include kb-row(4);
+  @include kb-main-key();
+
+  grid-column: 9 / span 3;
+}
+
+.kb-X {
+  @include kb-row(4);
+  @include kb-main-key();
+
+  grid-column: 13 / span 3;
+}
+
+.kb-C {
+  @include kb-row(4);
+  @include kb-main-key();
+
+  grid-column: 17 / span 3;
+}
+
+.kb-V {
+  @include kb-row(4);
+  @include kb-main-key();
+
+  grid-column: 21 / span 3;
+}
+
+.kb-B {
+  @include kb-row(4);
+  @include kb-main-key();
+
+  grid-column: 25 / span 3;
+}
+
+.kb-N {
+  @include kb-row(4);
+  @include kb-main-key();
+
+  grid-column: 29 / span 3;
+}
+
+.kb-question {
+  @include kb-row(4);
+  @include kb-main-key();
+
+  grid-column: 33 / span 3;
+}
+
+.kb-point {
+  @include kb-row(4);
+  @include kb-main-key();
+
+  grid-column: 37 / span 3;
+}
+
+.kb-slash {
+  @include kb-row(4);
+  @include kb-main-key();
+
+  grid-column: 41 / span 3;
+}
+
+.kb-exclamation {
+  @include kb-row(4);
+  @include kb-main-key();
+
+  grid-column: 45 / span 3;
+}
+
+.kb-rigth-shift {
+  @include kb-row(4);
+  @include kb-secondary-key();
+
+  grid-column: 49 / span 11;
+}
+
+// Fifth row
+
+.kb-left-ctrl {
+  @include kb-row(5);
+  @include kb-secondary-key();
+
+  grid-column: 1 / span 4;
+}
+
+.kb-windows {
+  @include kb-row(5);
+  @include kb-secondary-key();
+
+  grid-column: 6 / span 3;
+}
+
+.kb-alt {
+  @include kb-row(5);
+  @include kb-secondary-key();
+
+  grid-column: 10 / span 4;
+}
+
+.kb-space {
+  @include kb-row(5);
+  @include kb-secondary-key();
+
+  grid-column: 15 / span 25;
+}
+
+.kb-alt-gr {
+  @include kb-row(5);
+  @include kb-secondary-key();
+
+  grid-column: 41 / span 4;
+}
+
+.kb-fn {
+  @include kb-row(5);
+  @include kb-secondary-key();
+
+  grid-column: 46 / span 4;
+}
+
+.kb-copy {
+  @include kb-row(5);
+  @include kb-secondary-key();
+
+  grid-column: 51 / span 4;
+}
+
+.kb-rigth-ctrl {
+  @include kb-row(5);
+  @include kb-secondary-key();
+
+  grid-column: 56 / span 4;
+}
+
+
+
+
