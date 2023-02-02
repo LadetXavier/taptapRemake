@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { ManagerComponent } from './manager/manager.component';
 
 import { OptionComponent } from './option/option.component';
+import { KeyComponent } from './option/key/key.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ManagerComponent,
-    OptionComponent
+    OptionComponent,
+    KeyComponent
   ],
   imports: [
     BrowserModule,

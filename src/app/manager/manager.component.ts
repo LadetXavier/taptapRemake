@@ -11,7 +11,6 @@ export class ManagerComponent implements OnInit {
 
   constructor( private listManager: ListManagerService) {
 
-
   }
 
   listManagerProperty: ListProperty | any = {};
@@ -40,7 +39,5 @@ export class ManagerComponent implements OnInit {
   nextLetter= () => {
     this.listManagerProperty.currentLetter+=1;
   }
-
-
 
 }

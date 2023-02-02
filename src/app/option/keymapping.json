@@ -1,0 +1,572 @@
+{
+  "keys": [
+    {
+    "normalValue" : "²",
+    "majValue" : null,
+    "altGr" : null,
+    "gridRow" : "1 / span 3",
+    "gridCol" : "1 / span 3",
+    "specialClass" : ["kb-secondary-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "&",
+    "majValue" : "1",
+    "altGr" : null,
+    "gridRow" : "1 / span 3",
+    "gridCol" : "5 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "é",
+    "majValue" : "2",
+    "altGr" : "~",
+    "gridRow" : "1 / span 3",
+    "gridCol" : "9 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "\"",
+    "majValue" : "3",
+    "altGr" : "#",
+    "gridRow" : "1 / span 3",
+    "gridCol" : "13 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "'",
+    "majValue" : "4",
+    "altGr" : "{",
+    "gridRow" : "1 / span 3",
+    "gridCol" : "17 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "(",
+    "majValue" : "5",
+    "altGr" : "[",
+    "gridRow" : "1 / span 3",
+    "gridCol" : "21 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "-",
+    "majValue" : "6",
+    "altGr" : "|",
+    "gridRow" : "1 / span 3",
+    "gridCol" : "25 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "è",
+    "majValue" : "7",
+    "altGr" : "`",
+    "gridRow" : "1 / span 3",
+    "gridCol" : "29 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "_",
+    "majValue" : "8",
+    "altGr" : "\\",
+    "gridRow" : "1 / span 3",
+    "gridCol" : "33 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "ç",
+    "majValue" : "9",
+    "altGr" : "^",
+    "gridRow" : "1 / span 3",
+    "gridCol" : "37 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "à",
+    "majValue" : "0",
+    "altGr" : "@",
+    "gridRow" : "1 / span 3",
+    "gridCol" : "41 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : ")",
+    "majValue" : "°",
+    "altGr" : "]",
+    "gridRow" : "1 / span 3",
+    "gridCol" : "45 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "=",
+    "majValue" : "+",
+    "altGr" : "}",
+    "gridRow" : "1 / span 3",
+    "gridCol" : "49 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "Return",
+    "majValue" : "",
+    "altGr" : "",
+    "gridRow" : "1 / span 3",
+    "gridCol" : "53 / span 7",
+    "specialClass" : ["kb-secondary-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "Tab",
+    "majValue" : "",
+    "altGr" : "",
+    "gridRow" : "5 / span 3",
+    "gridCol" : "1 / span 5",
+    "specialClass" : ["kb-secondary-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "a",
+    "majValue" : "A",
+    "altGr" : "",
+    "gridRow" : "5 / span 3",
+    "gridCol" : "7 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "z",
+    "majValue" : "Z",
+    "altGr" : "",
+    "gridRow" : "5 / span 3",
+    "gridCol" : "11 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "e",
+    "majValue" : "E",
+    "altGr" : "",
+    "gridRow" : "5 / span 3",
+    "gridCol" : "15 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "r",
+    "majValue" : "R",
+    "altGr" : "",
+    "gridRow" : "5 / span 3",
+    "gridCol" : "19 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "t",
+    "majValue" : "T",
+    "altGr" : "",
+    "gridRow" : "5 / span 3",
+    "gridCol" : "23 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "y",
+    "majValue" : "Y",
+    "altGr" : "",
+    "gridRow" : "5 / span 3",
+    "gridCol" : "27 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "u",
+    "majValue" : "U",
+    "altGr" : "",
+    "gridRow" : "5 / span 3",
+    "gridCol" : "31 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "i",
+    "majValue" : "I",
+    "altGr" : "",
+    "gridRow" : "5 / span 3",
+    "gridCol" : "35 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "o",
+    "majValue" : "O",
+    "altGr" : "",
+    "gridRow" : "5 / span 3",
+    "gridCol" : "39 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "p",
+    "majValue" : "P",
+    "altGr" : "",
+    "gridRow" : "5 / span 3",
+    "gridCol" : "43 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "^",
+    "majValue" : "¨",
+    "altGr" : "",
+    "gridRow" : "5 / span 3",
+    "gridCol" : "47 / span 3",
+    "specialClass" : ["kb-secondary-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "$",
+    "majValue" : "£",
+    "altGr" : "¤",
+    "gridRow" : "5 / span 3",
+    "gridCol" : "51 / span 3",
+    "specialClass" : ["kb-secondary-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "Enter",
+    "majValue" : "",
+    "altGr" : "",
+    "gridRow" : "5 / span 3",
+    "gridCol" : "55 / span 5",
+    "specialClass" : ["kb-secondary-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "Caps",
+    "majValue" : "",
+    "altGr" : "",
+    "gridRow" : "9 / span 3",
+    "gridCol" : "1 / span 6",
+    "specialClass" : ["kb-secondary-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "q",
+    "majValue" : "Q",
+    "altGr" : "",
+    "gridRow" : "9 / span 3",
+    "gridCol" : "8 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "s",
+    "majValue" : "S",
+    "altGr" : "",
+    "gridRow" : "9 / span 3",
+    "gridCol" : "12 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "d",
+    "majValue" : "D",
+    "altGr" : "",
+    "gridRow" : "9 / span 3",
+    "gridCol" : "16 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "f",
+    "majValue" : "F",
+    "altGr" : "",
+    "gridRow" : "9 / span 3",
+    "gridCol" : "20 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "g",
+    "majValue" : "G",
+    "altGr" : "",
+    "gridRow" : "9 / span 3",
+    "gridCol" : "24 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "h",
+    "majValue" : "H",
+    "altGr" : "",
+    "gridRow" : "9 / span 3",
+    "gridCol" : "28 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "j",
+    "majValue" : "J",
+    "altGr" : "",
+    "gridRow" : "9 / span 3",
+    "gridCol" : "32 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "k",
+    "majValue" : "K",
+    "altGr" : "",
+    "gridRow" : "9 / span 3",
+    "gridCol" : "36 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "l",
+    "majValue" : "L",
+    "altGr" : "",
+    "gridRow" : "9 / span 3",
+    "gridCol" : "40 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "m",
+    "majValue" : "M",
+    "altGr" : "",
+    "gridRow" : "9 / span 3",
+    "gridCol" : "44 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "ù",
+    "majValue" : "%",
+    "altGr" : "",
+    "gridRow" : "9 / span 3",
+    "gridCol" : "48 / span 3",
+    "specialClass" : ["kb-secondary-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "*",
+    "majValue" : "µ",
+    "altGr" : "",
+    "gridRow" : "9 / span 3",
+    "gridCol" : "52 / span 3",
+    "specialClass" : ["kb-secondary-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "",
+    "majValue" : "",
+    "altGr" : "",
+    "gridRow" : "8 / span 4",
+    "gridCol" : "56 / span 4",
+    "specialClass" : ["kb-secondary-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "Shift",
+    "majValue" : "",
+    "altGr" : "",
+    "gridRow" : "13 / span 3",
+    "gridCol" : "1 / span 3",
+    "specialClass" : ["kb-secondary-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "<",
+    "majValue" : ">",
+    "altGr" : "",
+    "gridRow" : "13 / span 3",
+    "gridCol" : "5 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "w",
+    "majValue" : "W",
+    "altGr" : "",
+    "gridRow" : "13 / span 3",
+    "gridCol" : "9 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "x",
+    "majValue" : "X",
+    "altGr" : "",
+    "gridRow" : "13 / span 3",
+    "gridCol" : "13 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "c",
+    "majValue" : "C",
+    "altGr" : "",
+    "gridRow" : "13 / span 3",
+    "gridCol" : "17 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "v",
+    "majValue" : "V",
+    "altGr" : "",
+    "gridRow" : "13 / span 3",
+    "gridCol" : "21 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "b",
+    "majValue" : "B",
+    "altGr" : "",
+    "gridRow" : "13 / span 3",
+    "gridCol" : "25 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "n",
+    "majValue" : "N",
+    "altGr" : "",
+    "gridRow" : "13 / span 3",
+    "gridCol" : "29 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : ",",
+    "majValue" : "?",
+    "altGr" : "",
+    "gridRow" : "13 / span 3",
+    "gridCol" : "33 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : ";",
+    "majValue" : ".",
+    "altGr" : "",
+    "gridRow" : "13 / span 3",
+    "gridCol" : "37 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : ":",
+    "majValue" : "/",
+    "altGr" : "",
+    "gridRow" : "13 / span 3",
+    "gridCol" : "41 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "!",
+    "majValue" : "§",
+    "altGr" : "",
+    "gridRow" : "13 / span 3",
+    "gridCol" : "45 / span 3",
+    "specialClass" : ["kb-main-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "Shift",
+    "majValue" : "",
+    "altGr" : "",
+    "gridRow" : "13 / span 3",
+    "gridCol" : "49 / span 11",
+    "specialClass" : ["kb-secondary-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "Ctrl",
+    "majValue" : "",
+    "altGr" : "",
+    "gridRow" : "17 / span 3",
+    "gridCol" : "1 / span 4",
+    "specialClass" : ["kb-secondary-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "Win",
+    "majValue" : "",
+    "altGr" : "",
+    "gridRow" : "17 / span 3",
+    "gridCol" : "6 / span 3",
+    "specialClass" : ["kb-secondary-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "Alt",
+    "majValue" : "",
+    "altGr" : "",
+    "gridRow" : "17 / span 3",
+    "gridCol" : "10 / span 4",
+    "specialClass" : ["kb-secondary-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "",
+    "majValue" : "",
+    "altGr" : "",
+    "gridRow" : "17 / span 3",
+    "gridCol" : "15 / span 25",
+    "specialClass" : ["kb-secondary-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "AltGr",
+    "majValue" : "",
+    "altGr" : "",
+    "gridRow" : "17 / span 3",
+    "gridCol" : "41 / span 4",
+    "specialClass" : ["kb-secondary-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "Fn",
+    "majValue" : "",
+    "altGr" : "",
+    "gridRow" : "17 / span 3",
+    "gridCol" : "46 / span 4",
+    "specialClass" : ["kb-secondary-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "RClic",
+    "majValue" : "",
+    "altGr" : "",
+    "gridRow" : "17 / span 3",
+    "gridCol" : "51 / span 4",
+    "specialClass" : ["kb-secondary-key"],
+    "specialStyle" : null
+  },
+  {
+    "normalValue" : "Ctrl",
+    "majValue" : "",
+    "altGr" : "",
+    "gridRow" : "17 / span 3",
+    "gridCol" : "56 / span 4",
+    "specialClass" : ["kb-secondary-key"],
+    "specialStyle" : null
+  }
+
+]
+}

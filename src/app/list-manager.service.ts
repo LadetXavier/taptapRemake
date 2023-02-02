@@ -5,10 +5,8 @@ import { Injectable } from '@angular/core';
 })
 
 
-
+// Service to generate and manage a list of random character
 export class ListManagerService {
-
-
 
   listProperty:ListProperty = {
     isFailing : false,
