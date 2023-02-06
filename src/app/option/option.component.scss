@@ -26,24 +26,26 @@
 }
 
 .kb-main-key {
-  background-color: red;
+  background-color: rgba(8, 8, 105, 0.589);
   border: 1px solid black;
 }
 
-
-@mixin kb-row($row) {
-  grid-row: calc($row * 4 - 3)/span 3;
+.kb-main-key:hover {
+  border-color: white;
 }
 
-@mixin kb-main-key {
-  background-color: red;
-  border: 1px solid black;
+.view {
+  margin-bottom: 1em;
 }
 
-@mixin kb-secondary-key {
-  background-color: grey;
-  border: 1px solid white;
+.view-radio {
+  margin-right: 1em;
+}
 
+.view-flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
 }
 
 

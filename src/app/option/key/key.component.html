@@ -1,4 +1,19 @@
 <div class="kb-key">
-  <div class="kb-norm">{{keyData.normalValue}}</div>
+  <div *ngIf="currentView === keyboardView.normal" class="kb-value"
+    [class.key-added]="normalValueAdded"
+    (click)="onSelectKey()"
+  >
+    <p>{{keyData.normalValue}}</p>
+  </div>
+  <div *ngIf="currentView === keyboardView.uppercase" class="kb-value"
+    [class.key-added]="upperValueAdded"
+    (click)="onSelectKey()"
+  >
+    <p>{{keyData.majValue}}</p></div>
+  <div *ngIf="currentView === keyboardView.altGr" class="kb-value"
+    [class.key-added]="altGrValueAdded"
+    (click)="onSelectKey()"
+  >
+    <p>{{keyData.altGr}}</p></div>
 
 </div>

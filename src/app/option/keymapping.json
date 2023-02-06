@@ -7,7 +7,8 @@
     "gridRow" : "1 / span 3",
     "gridCol" : "1 / span 3",
     "specialClass" : ["kb-secondary-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : false
   },
   {
     "normalValue" : "&",
@@ -16,7 +17,8 @@
     "gridRow" : "1 / span 3",
     "gridCol" : "5 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "é",
@@ -25,7 +27,8 @@
     "gridRow" : "1 / span 3",
     "gridCol" : "9 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "\"",
@@ -34,7 +37,8 @@
     "gridRow" : "1 / span 3",
     "gridCol" : "13 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "'",
@@ -43,7 +47,8 @@
     "gridRow" : "1 / span 3",
     "gridCol" : "17 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "(",
@@ -52,7 +57,8 @@
     "gridRow" : "1 / span 3",
     "gridCol" : "21 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "-",
@@ -61,7 +67,8 @@
     "gridRow" : "1 / span 3",
     "gridCol" : "25 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "è",
@@ -70,7 +77,8 @@
     "gridRow" : "1 / span 3",
     "gridCol" : "29 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "_",
@@ -79,7 +87,8 @@
     "gridRow" : "1 / span 3",
     "gridCol" : "33 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "ç",
@@ -88,7 +97,8 @@
     "gridRow" : "1 / span 3",
     "gridCol" : "37 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "à",
@@ -97,7 +107,8 @@
     "gridRow" : "1 / span 3",
     "gridCol" : "41 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : ")",
@@ -106,7 +117,8 @@
     "gridRow" : "1 / span 3",
     "gridCol" : "45 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "=",
@@ -115,7 +127,8 @@
     "gridRow" : "1 / span 3",
     "gridCol" : "49 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "Return",
@@ -124,7 +137,8 @@
     "gridRow" : "1 / span 3",
     "gridCol" : "53 / span 7",
     "specialClass" : ["kb-secondary-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : false
   },
   {
     "normalValue" : "Tab",
@@ -133,7 +147,8 @@
     "gridRow" : "5 / span 3",
     "gridCol" : "1 / span 5",
     "specialClass" : ["kb-secondary-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : false
   },
   {
     "normalValue" : "a",
@@ -142,7 +157,8 @@
     "gridRow" : "5 / span 3",
     "gridCol" : "7 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "z",
@@ -151,7 +167,8 @@
     "gridRow" : "5 / span 3",
     "gridCol" : "11 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "e",
@@ -160,7 +177,8 @@
     "gridRow" : "5 / span 3",
     "gridCol" : "15 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "r",
@@ -169,7 +187,8 @@
     "gridRow" : "5 / span 3",
     "gridCol" : "19 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "t",
@@ -178,7 +197,8 @@
     "gridRow" : "5 / span 3",
     "gridCol" : "23 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "y",
@@ -187,7 +207,8 @@
     "gridRow" : "5 / span 3",
     "gridCol" : "27 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "u",
@@ -196,7 +217,8 @@
     "gridRow" : "5 / span 3",
     "gridCol" : "31 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "i",
@@ -205,7 +227,8 @@
     "gridRow" : "5 / span 3",
     "gridCol" : "35 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "o",
@@ -214,7 +237,8 @@
     "gridRow" : "5 / span 3",
     "gridCol" : "39 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "p",
@@ -223,7 +247,8 @@
     "gridRow" : "5 / span 3",
     "gridCol" : "43 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "^",
@@ -232,7 +257,8 @@
     "gridRow" : "5 / span 3",
     "gridCol" : "47 / span 3",
     "specialClass" : ["kb-secondary-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "$",
@@ -241,7 +267,8 @@
     "gridRow" : "5 / span 3",
     "gridCol" : "51 / span 3",
     "specialClass" : ["kb-secondary-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "Enter",
@@ -250,7 +277,8 @@
     "gridRow" : "5 / span 3",
     "gridCol" : "55 / span 5",
     "specialClass" : ["kb-secondary-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : false
   },
   {
     "normalValue" : "Caps",
@@ -259,7 +287,8 @@
     "gridRow" : "9 / span 3",
     "gridCol" : "1 / span 6",
     "specialClass" : ["kb-secondary-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : false
   },
   {
     "normalValue" : "q",
@@ -268,7 +297,8 @@
     "gridRow" : "9 / span 3",
     "gridCol" : "8 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "s",
@@ -277,7 +307,8 @@
     "gridRow" : "9 / span 3",
     "gridCol" : "12 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "d",
@@ -286,7 +317,8 @@
     "gridRow" : "9 / span 3",
     "gridCol" : "16 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "f",
@@ -295,7 +327,8 @@
     "gridRow" : "9 / span 3",
     "gridCol" : "20 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "g",
@@ -304,7 +337,8 @@
     "gridRow" : "9 / span 3",
     "gridCol" : "24 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "h",
@@ -313,7 +347,8 @@
     "gridRow" : "9 / span 3",
     "gridCol" : "28 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "j",
@@ -322,7 +357,8 @@
     "gridRow" : "9 / span 3",
     "gridCol" : "32 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "k",
@@ -331,7 +367,8 @@
     "gridRow" : "9 / span 3",
     "gridCol" : "36 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "l",
@@ -340,7 +377,8 @@
     "gridRow" : "9 / span 3",
     "gridCol" : "40 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "m",
@@ -349,7 +387,8 @@
     "gridRow" : "9 / span 3",
     "gridCol" : "44 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "ù",
@@ -358,7 +397,8 @@
     "gridRow" : "9 / span 3",
     "gridCol" : "48 / span 3",
     "specialClass" : ["kb-secondary-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "*",
@@ -367,7 +407,8 @@
     "gridRow" : "9 / span 3",
     "gridCol" : "52 / span 3",
     "specialClass" : ["kb-secondary-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "",
@@ -376,7 +417,8 @@
     "gridRow" : "8 / span 4",
     "gridCol" : "56 / span 4",
     "specialClass" : ["kb-secondary-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : false
   },
   {
     "normalValue" : "Shift",
@@ -385,7 +427,8 @@
     "gridRow" : "13 / span 3",
     "gridCol" : "1 / span 3",
     "specialClass" : ["kb-secondary-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : false
   },
   {
     "normalValue" : "<",
@@ -394,7 +437,8 @@
     "gridRow" : "13 / span 3",
     "gridCol" : "5 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "w",
@@ -403,7 +447,8 @@
     "gridRow" : "13 / span 3",
     "gridCol" : "9 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "x",
@@ -412,7 +457,8 @@
     "gridRow" : "13 / span 3",
     "gridCol" : "13 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "c",
@@ -421,7 +467,8 @@
     "gridRow" : "13 / span 3",
     "gridCol" : "17 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "v",
@@ -430,7 +477,8 @@
     "gridRow" : "13 / span 3",
     "gridCol" : "21 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "b",
@@ -439,7 +487,8 @@
     "gridRow" : "13 / span 3",
     "gridCol" : "25 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "n",
@@ -448,7 +497,8 @@
     "gridRow" : "13 / span 3",
     "gridCol" : "29 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : ",",
@@ -457,7 +507,8 @@
     "gridRow" : "13 / span 3",
     "gridCol" : "33 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : ";",
@@ -466,7 +517,8 @@
     "gridRow" : "13 / span 3",
     "gridCol" : "37 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : ":",
@@ -475,7 +527,8 @@
     "gridRow" : "13 / span 3",
     "gridCol" : "41 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "!",
@@ -484,7 +537,8 @@
     "gridRow" : "13 / span 3",
     "gridCol" : "45 / span 3",
     "specialClass" : ["kb-main-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : true
   },
   {
     "normalValue" : "Shift",
@@ -493,7 +547,8 @@
     "gridRow" : "13 / span 3",
     "gridCol" : "49 / span 11",
     "specialClass" : ["kb-secondary-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : false
   },
   {
     "normalValue" : "Ctrl",
@@ -502,7 +557,8 @@
     "gridRow" : "17 / span 3",
     "gridCol" : "1 / span 4",
     "specialClass" : ["kb-secondary-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : false
   },
   {
     "normalValue" : "Win",
@@ -511,7 +567,8 @@
     "gridRow" : "17 / span 3",
     "gridCol" : "6 / span 3",
     "specialClass" : ["kb-secondary-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : false
   },
   {
     "normalValue" : "Alt",
@@ -520,7 +577,8 @@
     "gridRow" : "17 / span 3",
     "gridCol" : "10 / span 4",
     "specialClass" : ["kb-secondary-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : false
   },
   {
     "normalValue" : "",
@@ -529,7 +587,8 @@
     "gridRow" : "17 / span 3",
     "gridCol" : "15 / span 25",
     "specialClass" : ["kb-secondary-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : false
   },
   {
     "normalValue" : "AltGr",
@@ -538,7 +597,8 @@
     "gridRow" : "17 / span 3",
     "gridCol" : "41 / span 4",
     "specialClass" : ["kb-secondary-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : false
   },
   {
     "normalValue" : "Fn",
@@ -547,7 +607,8 @@
     "gridRow" : "17 / span 3",
     "gridCol" : "46 / span 4",
     "specialClass" : ["kb-secondary-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : false
   },
   {
     "normalValue" : "RClic",
@@ -556,7 +617,8 @@
     "gridRow" : "17 / span 3",
     "gridCol" : "51 / span 4",
     "specialClass" : ["kb-secondary-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : false
   },
   {
     "normalValue" : "Ctrl",
@@ -565,7 +627,8 @@
     "gridRow" : "17 / span 3",
     "gridCol" : "56 / span 4",
     "specialClass" : ["kb-secondary-key"],
-    "specialStyle" : null
+    "specialStyle" : null,
+    "isClickable" : false
   }
 
 ]

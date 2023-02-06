@@ -1,5 +1,7 @@
 import { Component, Input, OnInit, HostBinding } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
+import {keyboardView} from '../option.component';
+import { ListManagerService, ListProperty } from '../../list-manager.service';
 
 interface KeyData {
     normalValue: string,
@@ -9,6 +11,7 @@ interface KeyData {
     gridCol: string,
     specialClass : string[],
     specialStyle: string,
+    isClickable: boolean
 }
 
 @Component({
@@ -18,7 +21,7 @@ interface KeyData {
 })
 export class KeyComponent implements OnInit {
 
-  constructor(private sanitizer:DomSanitizer) { }
+  constructor(private sanitizer:DomSanitizer, private listManager:ListManagerService) { }
 
   @Input() keyData: KeyData = {
     normalValue: "Default",
@@ -27,8 +30,12 @@ export class KeyComponent implements OnInit {
     gridRow: "default",
     gridCol: "default",
     specialClass :  [],
-    specialStyle: ""
+    specialStyle: "",
+    isClickable: false
   }
+
+  @Input() currentView: keyboardView = keyboardView.normal;
+  readonly keyboardView = keyboardView;
 
   @HostBinding("class") get classes() {
     return this.keyData.specialClass;
@@ -41,8 +48,48 @@ export class KeyComponent implements OnInit {
     return this.sanitizer.bypassSecurityTrustStyle(this.keyData.gridCol );
   }
 
+  listManagerProperty: ListProperty | any = {};
+
+  normalValueAdded: boolean = false;
+  upperValueAdded: boolean = false;
+  altGrValueAdded: boolean = false;
+
+  onSelectKey = () => {
+    if(this.keyData.isClickable) {
+      if(this.currentView === keyboardView.normal){
+        this.normalValueAdded = !this.normalValueAdded;
+        if(this.normalValueAdded){
+          this.listManager.addLetter(this.keyData.normalValue);
+        }
+        else {
+          this.listManager.removeLetter(this.keyData.normalValue);
+        }
+      }
+      if(this.currentView === keyboardView.uppercase && this.keyData.majValue){
+        this.upperValueAdded = !this.upperValueAdded;
+        if(this.upperValueAdded ){
+          this.listManager.addLetter(this.keyData.majValue);
+        }
+        else {
+          this.listManager.removeLetter(this.keyData.majValue);
+        }
+      }
+      if(this.currentView === keyboardView.altGr && this.keyData.altGr){
+        this.altGrValueAdded = !this.altGrValueAdded;
+        if(this.altGrValueAdded ){
+          this.listManager.addLetter(this.keyData.altGr);
+        }
+        else{
+          this.listManager.removeLetter(this.keyData.altGr);
+        }
+      }
+    }
+
+  }
+
 
   ngOnInit(): void {
+    this.listManagerProperty=this.listManager.listProperty;
   }
 
 }

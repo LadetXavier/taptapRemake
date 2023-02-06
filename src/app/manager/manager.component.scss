@@ -17,6 +17,16 @@ $bg-current-letter-fail: red;
   font-weight: 500;
 }
 
+.option-button {
+  background: rgba(27, 27, 27, 0.753);
+  user-select: none;
+  cursor: pointer;
+  padding: 0.5em 1.5em;
+}
+
+
+// Game related CSS
+
 .letter {
   padding: 0.3em 0.2em;
   margin-top: 0.2em;

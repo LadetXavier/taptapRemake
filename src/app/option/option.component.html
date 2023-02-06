@@ -1,9 +1,28 @@
 <div class="option-container">
+  <div class="view">
+    <p for="">See :</p>
+    <div class="view-flex-container">
+        <div class="view-flex-element">
+          <label for="normal">Normal value</label>
+          <input type="radio" name="view-choice" id="normal" value="Normal value" class="view-radio" checked (click)="setCurrentView(keyboardView.normal)">
+        </div>
+        <div class="view-flex-element">
+          <label for="uppercase">Uppercase value</label>
+          <input type="radio" name="view-choice" id="uppercase" value="Uppercase value" class="view-radio" (click)="setCurrentView(keyboardView.uppercase)">
+        </div>
+        <div class="view-flex-element">
+          <label for="altGr">AltGr value</label>
+          <input type="radio" name="view-choice" id="altGr" value="AltGr value" class="view-radio" (click)="setCurrentView(keyboardView.altGr)">
+        </div>
+    </div>
+  </div>
 <div class="keyboard-container">
   <app-key *ngFor="let keyInputData of keyObj.keys"
    [keyData]="keyInputData"
+   [currentView]="currentView"
   >
   </app-key>
 </div>
 <input type="button" value="Generate" (click)="StartNewTest()">
+<input type="button" value="See List" (click)="seeList()">
 </div>

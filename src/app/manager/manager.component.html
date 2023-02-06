@@ -1,7 +1,7 @@
 <main class="manager-container" (window:keydown)="onKeyType($event)">
   <h1 class="main-title">Ready to train ?</h1>
-  <app-option #option></app-option>
-  <p>{{option.listLength}}</p>
+  <div class="option-button" (click)="onOption()">Option</div>
+  <app-option #option *ngIf="isOptionDisplayed"></app-option>
   <div class="game-container" >
     <div class="letter"
     *ngFor="let letter of listManagerProperty.listLetter;let i=index"

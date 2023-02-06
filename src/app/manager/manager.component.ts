@@ -10,13 +10,17 @@ import { ListManagerService, ListProperty } from '../list-manager.service';
 export class ManagerComponent implements OnInit {
 
   constructor( private listManager: ListManagerService) {
-
   }
 
   listManagerProperty: ListProperty | any = {};
+  isOptionDisplayed: boolean = false;
 
   ngOnInit(): void {
     this.listManagerProperty = this.listManager.listProperty;
+  }
+
+  onOption = () => {
+    this.isOptionDisplayed=!this.isOptionDisplayed;
   }
 
   onKeyType = (event:KeyboardEvent) => {

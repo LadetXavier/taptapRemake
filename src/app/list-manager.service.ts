@@ -1,23 +1,27 @@
 import { Injectable } from '@angular/core';
 
+export interface ListProperty {
+  isFailing : boolean;
+  currentLetter : number;
+  listLetter : string[];
+  listPossibleLetter : string[];
+}
+
 @Injectable({
   providedIn: 'root'
 })
 
-
 // Service to generate and manage a list of random character
 export class ListManagerService {
+
+  constructor() { }
 
   listProperty:ListProperty = {
     isFailing : false,
     currentLetter: 0,
 
     listLetter: [],
-    listPossibleLetter: ['a','z','e','r','t','y','u','i','o','p',
-  'q','s','d','f','g','h','j','k','l','m',
-  'w','x','c','v','b','n',',',';',':','!',
-  '&','é',"\"",'\'','(','-','è','_','ç','à',')','=']
-
+    listPossibleLetter: []
   }
 
   generateList = (length:number) => {
@@ -49,14 +53,21 @@ export class ListManagerService {
     }
   }
 
-  constructor() { }
+  seeList = () => {
+    console.log(this.listProperty.listPossibleLetter);
+  }
+
+  addLetter = (letter:string):void => {
+    this.listProperty.listPossibleLetter.push(letter);
+  }
+   removeLetter = (letter:string):void => {
+    let index = this.listProperty.listPossibleLetter.indexOf(letter);
+    this.listProperty.listPossibleLetter.splice(index,1);
+  }
+
+
+
+
 }
 
-export interface ListProperty {
-  isFailing : boolean;
-  currentLetter : number;
 
-  listLetter : string[];
-  listPossibleLetter : string[];
-
-}
