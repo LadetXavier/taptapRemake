@@ -14,6 +14,11 @@ export class ManagerComponent implements OnInit {
 
   listManagerProperty: ListProperty | any = {};
   isOptionDisplayed: boolean = false;
+  listLength: number = 30;
+  isStarted:boolean = false;
+  isEnded: boolean = false;
+  timer: number = 0.0;
+  intervalToClear:any = null;
 
   ngOnInit(): void {
     this.listManagerProperty = this.listManager.listProperty;
@@ -23,15 +28,41 @@ export class ManagerComponent implements OnInit {
     this.isOptionDisplayed=!this.isOptionDisplayed;
   }
 
-  onKeyType = (event:KeyboardEvent) => {
+  onStart = ($event:MouseEvent) => {
+    ($event.target as HTMLButtonElement).blur();
+    this.listManager.generateList(this.listLength);
+    this.isStarted = true;
+    this.timer = 0;
+    this.onStopTimer();
+  }
 
-    this.testCurrentLetter(event.key);
+  onStopTimer = () => {
+    clearInterval(this.intervalToClear);
+  }
+
+  // Game related method
+
+  onKeyType = (event:KeyboardEvent) => {
+    if(this.isStarted) {
+      this.testCurrentLetter(event.key);
+    }
   }
 
   testCurrentLetter = (letterToTest:string) => {
+    if(this.listManagerProperty.currentLetter === 0 && this.timer===0)  {
+      this.startTimer();
+    }
     if(this.listManagerProperty.listLetter[this.listManagerProperty.currentLetter]===letterToTest) {
-      this.nextLetter();
+       if(this.listManagerProperty.currentLetter === this.listManagerProperty.listLetter.length-1)  {
+        this.isEnded = true;
+        this.onStopTimer();
+      }
+      else {
+        this.listManager.nextLetter();
+      }
       this.listManagerProperty.isFailing = false;
+
+
       return true;
     }
     else {
@@ -40,8 +71,14 @@ export class ManagerComponent implements OnInit {
     }
   }
 
-  nextLetter= () => {
-    this.listManagerProperty.currentLetter+=1;
+
+
+  startTimer= () => {
+    this.intervalToClear = setInterval(this.interval,100);
+  }
+
+  interval = () => {
+    this.timer = this.timer + 0.1;
   }
 
 }

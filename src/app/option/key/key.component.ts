@@ -87,9 +87,22 @@ export class KeyComponent implements OnInit {
 
   }
 
+  alreadyActive = () => {
+    if(this.listManagerProperty.listPossibleLetter.indexOf(this.keyData.normalValue) !== -1) {
+      this.normalValueAdded=true;
+    }
+     if(this.listManagerProperty.listPossibleLetter.indexOf(this.keyData.majValue) !== -1) {
+      this.upperValueAdded=true;
+    }
+     if(this.listManagerProperty.listPossibleLetter.indexOf(this.keyData.altGr) !== -1) {
+      this.altGrValueAdded=true;
+    }
+  }
+
 
   ngOnInit(): void {
     this.listManagerProperty=this.listManager.listProperty;
+    this.alreadyActive();
   }
 
 }

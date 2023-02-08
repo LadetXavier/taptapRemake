@@ -24,13 +24,9 @@ export class OptionComponent implements OnInit {
   }
   tempJson = keyJson as unknown;
   keyObj = this.tempJson as { keys:[any]};
-  listLength: number = 30;
+
   currentView: keyboardView = keyboardView.normal;
   readonly keyboardView = keyboardView;
-
-  StartNewTest = () => {
-    this.listManager.generateList(this.listLength);
-  }
 
   seeList = () => {
     this.listManager.seeList();

@@ -9,13 +9,17 @@ import { ManagerComponent } from './manager/manager.component';
 
 import { OptionComponent } from './option/option.component';
 import { KeyComponent } from './option/key/key.component';
+import { ResultComponent } from './manager/result/result.component';
+import { TimerInSecPipe } from './timer-in-sec.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ManagerComponent,
     OptionComponent,
-    KeyComponent
+    KeyComponent,
+    ResultComponent,
+    TimerInSecPipe
   ],
   imports: [
     BrowserModule,
