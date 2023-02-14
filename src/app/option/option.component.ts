@@ -19,7 +19,7 @@ export class OptionComponent implements OnInit {
 
 
   ngOnInit(): void {
-
+    this.listManagerPublic = this.listManager;
 
   }
   tempJson = keyJson as unknown;
@@ -27,6 +27,8 @@ export class OptionComponent implements OnInit {
 
   currentView: keyboardView = keyboardView.normal;
   readonly keyboardView = keyboardView;
+  listManagerPublic: ListManagerService =this.listManager;
+  defaultPreset: any;
 
   seeList = () => {
     this.listManager.seeList();
@@ -34,6 +36,10 @@ export class OptionComponent implements OnInit {
 
   setCurrentView = (value:keyboardView) => {
     this.currentView = value;
+  }
+
+  see = () => {
+    console.log(this.defaultPreset);
   }
 
 }

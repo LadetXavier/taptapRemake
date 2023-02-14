@@ -1,10 +1,16 @@
 import { Injectable } from '@angular/core';
+import * as defaultPreset from "./preset.json";
 
 export interface ListProperty {
   isFailing : boolean;
   currentLetter : number;
   listLetter : string[];
   listPossibleLetter : string[];
+}
+
+export interface PresetList {
+  name: string,
+  list: string[]
 }
 
 @Injectable({
@@ -22,6 +28,9 @@ export class ListManagerService {
     listLetter: [],
     listPossibleLetter: []
   }
+
+  tempJson = defaultPreset as unknown;
+  presetJson = this.tempJson as { defaultPreset:[PresetList]};
 
   generateList = (length:number) => {
     //reset of UI
@@ -70,6 +79,16 @@ export class ListManagerService {
 
    nextLetter= () => {
     this.listProperty.currentLetter+=1;
+  }
+
+  loadDefaultPreset = (namePreset:string) => {
+    let tempListPossibleLetter = this.presetJson.defaultPreset.find( e => {
+      return namePreset === e.name;
+    })?.list;
+    if (tempListPossibleLetter === undefined) {
+      tempListPossibleLetter = [];
+    }
+    this.listProperty.listPossibleLetter = tempListPossibleLetter;
   }
 
 

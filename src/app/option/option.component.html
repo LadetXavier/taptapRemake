@@ -23,5 +23,9 @@
   >
   </app-key>
 </div>
-<input type="button" value="See List" (click)="seeList()">
+<label for="defaultPreset">Choose a preset</label>
+<select name="defaultPreset" [(ngModel)]="defaultPreset">
+  <option *ngFor="let preset of listManagerPublic.presetJson.defaultPreset" [value]="preset.name"></option>
+</select>
+<input type="button" value="Load Preset" id="loadDefaultPresetButton" (click)="listManagerPublic.loadDefaultPreset(defaultPreset)">
 </div>
