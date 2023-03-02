@@ -80,8 +80,8 @@ export class ListManagerService {
    nextLetter= () => {
     this.listProperty.currentLetter+=1;
   }
-
   loadDefaultPreset = (namePreset:string) => {
+
     let tempListPossibleLetter = this.presetJson.defaultPreset.find( e => {
       return namePreset === e.name;
     })?.list;
@@ -89,6 +89,7 @@ export class ListManagerService {
       tempListPossibleLetter = [];
     }
     this.listProperty.listPossibleLetter = tempListPossibleLetter;
+    console.log(this.listProperty.listPossibleLetter);
   }
 
 

@@ -1,0 +1,15 @@
+.tab-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.tab-item {
+  cursor: pointer;
+  margin: 0.5em;
+  border-bottom: solid 0.05em white;
+  color: grey;
+}
+
+.tab-active {
+  color: white;
+}

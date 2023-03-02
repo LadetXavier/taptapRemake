@@ -11,6 +11,8 @@ import { OptionComponent } from './option/option.component';
 import { KeyComponent } from './option/key/key.component';
 import { ResultComponent } from './manager/result/result.component';
 import { TimerInSecPipe } from './timer-in-sec.pipe';
+import { TabComponent } from './UI/tab/tab.component';
+import { TabsComponent } from './UI/tabs/tabs.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { TimerInSecPipe } from './timer-in-sec.pipe';
     OptionComponent,
     KeyComponent,
     ResultComponent,
-    TimerInSecPipe
+    TimerInSecPipe,
+    TabComponent,
+    TabsComponent
   ],
   imports: [
     BrowserModule,

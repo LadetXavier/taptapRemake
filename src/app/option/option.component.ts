@@ -28,7 +28,7 @@ export class OptionComponent implements OnInit {
   currentView: keyboardView = keyboardView.normal;
   readonly keyboardView = keyboardView;
   listManagerPublic: ListManagerService =this.listManager;
-  defaultPreset: any;
+  defaultPreset: any = "";
 
   seeList = () => {
     this.listManager.seeList();

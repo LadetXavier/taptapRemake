@@ -1,0 +1,8 @@
+<ul class="tab-container">
+  <li *ngFor="let current of tabs" (click)="selectTab(current)" class="tab-item"
+  [class.tab-active]="current.active"
+  >
+    {{current.tabTitle}}
+  </li>
+</ul>
+<ng-content></ng-content>

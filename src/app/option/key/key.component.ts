@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, HostBinding } from '@angular/core';
+import { Component, Input, OnInit, HostBinding, DoCheck } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import {keyboardView} from '../option.component';
 import { ListManagerService, ListProperty } from '../../list-manager.service';
@@ -54,6 +54,13 @@ export class KeyComponent implements OnInit {
   upperValueAdded: boolean = false;
   altGrValueAdded: boolean = false;
 
+  ngDoCheck() {
+    if(this.listManagerProperty.listPossibleLetter !== undefined) {
+      this.alreadyActive();
+    }
+
+  }
+
   onSelectKey = () => {
     if(this.keyData.isClickable) {
       if(this.currentView === keyboardView.normal){
@@ -91,11 +98,18 @@ export class KeyComponent implements OnInit {
     if(this.listManagerProperty.listPossibleLetter.indexOf(this.keyData.normalValue) !== -1) {
       this.normalValueAdded=true;
     }
+    else {
+      this.normalValueAdded=false;
+    }
      if(this.listManagerProperty.listPossibleLetter.indexOf(this.keyData.majValue) !== -1) {
       this.upperValueAdded=true;
+    } else {
+      this.upperValueAdded=false;
     }
      if(this.listManagerProperty.listPossibleLetter.indexOf(this.keyData.altGr) !== -1) {
       this.altGrValueAdded=true;
+    } else {
+      this.altGrValueAdded=false;
     }
   }
 
