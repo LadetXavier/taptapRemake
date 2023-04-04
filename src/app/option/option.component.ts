@@ -20,7 +20,6 @@ export class OptionComponent implements OnInit {
 
   ngOnInit(): void {
     this.listManagerPublic = this.listManager;
-
   }
   tempJson = keyJson as unknown;
   keyObj = this.tempJson as { keys:[any]};
@@ -28,6 +27,7 @@ export class OptionComponent implements OnInit {
   currentView: keyboardView = keyboardView.normal;
   readonly keyboardView = keyboardView;
   listManagerPublic: ListManagerService =this.listManager;
+  listLength: number = 30;
   defaultPreset: any = "";
 
   seeList = () => {
@@ -40,6 +40,16 @@ export class OptionComponent implements OnInit {
 
   see = () => {
     console.log(this.defaultPreset);
+  }
+
+  lengthUpdate = () => {
+    this.listManager.listProperty.length = this.listLength;
+  }
+
+  setIsStrict = (event:Event) => {
+    if(event.target instanceof HTMLInputElement) {
+        this.listManager.listProperty.isStrict = (event.target as HTMLInputElement).checked;
+    }
   }
 
 }

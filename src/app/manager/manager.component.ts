@@ -14,7 +14,7 @@ export class ManagerComponent implements OnInit {
 
   listManagerProperty: ListProperty | any = {};
   isOptionDisplayed: boolean = false;
-  listLength: number = 30;
+
   isStarted:boolean = false;
   isEnded: boolean = false;
   timer: number = 0.0;
@@ -24,20 +24,21 @@ export class ManagerComponent implements OnInit {
     this.listManagerProperty = this.listManager.listProperty;
   }
 
-  onOption = () => {
-    this.isOptionDisplayed=!this.isOptionDisplayed;
-  }
-
   onStart = ($event:MouseEvent) => {
     ($event.target as HTMLButtonElement).blur();
-    this.listManager.generateList(this.listLength);
-    this.isStarted = true;
-    this.timer = 0;
-    this.onStopTimer();
+    this.startGame();
   }
 
   onStopTimer = () => {
     clearInterval(this.intervalToClear);
+  }
+
+  startGame = () => {
+    this.listManager.generateList();
+    this.isStarted = true;
+    this.isEnded = false;
+    this.timer = 0;
+    this.onStopTimer();
   }
 
   // Game related method
@@ -52,9 +53,14 @@ export class ManagerComponent implements OnInit {
     if(this.listManagerProperty.currentLetter === 0 && this.timer===0)  {
       this.startTimer();
     }
-    if(this.listManagerProperty.listLetter[this.listManagerProperty.currentLetter]===letterToTest) {
+    if(this.listManagerProperty.isStrict) {
+
+    }
+    if(this.listManagerProperty.listLetter[this.listManagerProperty.currentLetter]===letterToTest
+      && ((this.listManagerProperty.isStrict && !this.listManagerProperty.isFailing) || !this.listManagerProperty.isStrict)) {
        if(this.listManagerProperty.currentLetter === this.listManagerProperty.listLetter.length-1)  {
         this.isEnded = true;
+        this.isStarted = false;
         this.onStopTimer();
       }
       else {
@@ -66,7 +72,12 @@ export class ManagerComponent implements OnInit {
       return true;
     }
     else {
-      this.listManagerProperty.isFailing = true;
+      if(this.listManagerProperty.isFailing && letterToTest === "Backspace") {
+          this.listManagerProperty.isFailing=false;
+      }
+      else {
+        this.listManagerProperty.isFailing = true;
+      }
       return false;
     }
   }

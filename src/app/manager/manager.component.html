@@ -1,25 +1,28 @@
 <main class="manager-container" (window:keydown)="onKeyType($event)">
-  <h1 class="main-title">Ready to train ?</h1>
-  <div class="option-button" (click)="onOption()">Option</div>
-  <app-option #option *ngIf="isOptionDisplayed"></app-option>
-  <label for="lengtList">How many character do you want ?</label>
-  <input type="number" [(ngModel)]="listLength">
-  <input type="button" value="Start" (click)="onStart($event)">
-  <div class="game-container" >
-    <div class="letter"
-    *ngFor="let letter of listManagerProperty.listLetter;let i=index"
-    [class.letter-space]="letter === ' '"
-    [class.letter-current]="i === listManagerProperty.currentLetter && !listManagerProperty.isFailing && !isEnded"
-    [class.letter-current-fail]=" i === listManagerProperty.currentLetter && listManagerProperty.isFailing && !isEnded"
-    [class.letter-done]="i < listManagerProperty.currentLetter || isEnded"
-    >
-      {{letter}}
-      <div class="space-holder" *ngIf="letter === ' '"
-      [class.space-current]="i === listManagerProperty.currentLetter"
-      ></div>
-    </div>
-  </div>
-  <app-result [timer]="timer"></app-result>
-  <input type="button" value="stop timer" (click)="onStopTimer()">
+  <tabs classPattern="main-tab">
+    <tab tabTitle="Tap Tap">
+      <div *ngIf="!isStarted && !isEnded">
+        <h2 class="main-title">Ready to train ?</h2>
+        <input type="button" value="Jouer" (click)="onStart($event)" class="play-button">
+      </div>
+      <div class="game-container" *ngIf="isStarted && !isEnded">
+        <div class="letter" *ngFor="let letter of listManagerProperty.listLetter;let i=index"
+          [class.letter-space]="letter === ' '"
+          [class.letter-current]="i === listManagerProperty.currentLetter && !listManagerProperty.isFailing && !isEnded"
+          [class.letter-current-fail]=" i === listManagerProperty.currentLetter && listManagerProperty.isFailing && !isEnded"
+          [class.letter-done]="i < listManagerProperty.currentLetter || isEnded">
+          {{letter}}
+          <div class="space-holder" *ngIf="letter === ' '" [class.space-current]="i === listManagerProperty.currentLetter">
+          </div>
+        </div>
+      </div>
+      <app-result *ngIf="isEnded" [timer]="timer" [restart]="startGame"></app-result>
+    </tab>
+
+    <tab tabTitle="Option">
+      <app-option #option ></app-option>
+    </tab>
+  </tabs>
+
 
 </main>

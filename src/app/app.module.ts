@@ -13,6 +13,7 @@ import { ResultComponent } from './manager/result/result.component';
 import { TimerInSecPipe } from './timer-in-sec.pipe';
 import { TabComponent } from './UI/tab/tab.component';
 import { TabsComponent } from './UI/tabs/tabs.component';
+import { HelpIconComponent } from './UI/help-icon/help-icon.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { TabsComponent } from './UI/tabs/tabs.component';
     ResultComponent,
     TimerInSecPipe,
     TabComponent,
-    TabsComponent
+    TabsComponent,
+    HelpIconComponent
   ],
   imports: [
     BrowserModule,

@@ -1,17 +1,22 @@
 <div class="option-container">
+  <label for="lengtList">Nombre de lettres</label>
+  <input type="number" [(ngModel)]="listLength" (change)="lengthUpdate()" class="length-input">
+  <label for="Strict">Gestion des erreurs stricte</label>
+  <input type="checkbox" name="Strict" id="Strict" (change)="setIsStrict($event)">
+  <app-help-icon></app-help-icon>
   <div class="view">
-    <p for="">See :</p>
+    <p for="">Vue :</p>
     <div class="view-flex-container">
         <div class="view-flex-element">
-          <label for="normal">Normal value</label>
+          <label for="normal">Valeur basique</label>
           <input type="radio" name="view-choice" id="normal" value="Normal value" class="view-radio" checked (click)="setCurrentView(keyboardView.normal)">
         </div>
         <div class="view-flex-element">
-          <label for="uppercase">Uppercase value</label>
+          <label for="uppercase">Majuscule</label>
           <input type="radio" name="view-choice" id="uppercase" value="Uppercase value" class="view-radio" (click)="setCurrentView(keyboardView.uppercase)">
         </div>
         <div class="view-flex-element">
-          <label for="altGr">AltGr value</label>
+          <label for="altGr">AtlGr</label>
           <input type="radio" name="view-choice" id="altGr" value="AltGr value" class="view-radio" (click)="setCurrentView(keyboardView.altGr)">
         </div>
     </div>
@@ -24,7 +29,7 @@
   </app-key>
 </div>
 
-<tabs>
+<tabs classPattern="small-tab">
   <tab tabTitle="Loading Preset">
     <select name="defaultPreset" [(ngModel)]="defaultPreset">
       <option value="" selected disabled>Choose a preset</option>

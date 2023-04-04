@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { TabComponent } from '../tab/tab.component';
 
 @Component({
@@ -29,4 +29,6 @@ export class TabsComponent implements OnInit {
     tab.active=true;
 
   }
+
+  @Input() classPattern:string = "default";
 }

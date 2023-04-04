@@ -1,4 +1,4 @@
-<ul class="tab-container">
+<ul class="tab-container {{classPattern}}" >
   <li *ngFor="let current of tabs" (click)="selectTab(current)" class="tab-item"
   [class.tab-active]="current.active"
   >
