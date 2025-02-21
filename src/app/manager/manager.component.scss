@@ -11,6 +11,18 @@ $bg-current-letter-fail: red;
   margin: auto;
 }
 
+.sidebar {
+  height: 100vh;
+  width: 15vw;
+  display: flex;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  border-left: rgb(55, 61, 70) solid 1px;
+  box-shadow: -5px 0px 3px rgb(21, 21, 21);
+  flex-direction: column;
+}
+
 .main-title {
   display: block;
   font-size: 2em;
@@ -45,8 +57,28 @@ $bg-current-letter-fail: red;
   background-color: $bg-letter;
 }
 
+.letter-code {
+  font-size: 1.2em;
+  padding: 0.15em;
+  background-color: $bg-letter;
+}
+
+.letter-tab {
+  width: 4em;
+  height: 1em;
+  background-color: inherit;
+}
+
 .letter-fail.letter {
   color: $bg-current-letter-fail;
+}
+
+.letter-blank-line {
+  height: 1.3em;
+  flex-basis: 100%;
+  padding: 0;
+  background-color: rgb(35, 36, 43);
+
 }
 
 .letter-done {
@@ -68,6 +100,13 @@ $bg-current-letter-fail: red;
   height: 0.05em;
   background-color: $bg-letter;
 
+}
+
+.letter-enter {
+  flex-basis: 100%;
+  height: 0.05em;
+  padding:0;
+  background-color: $bg-letter;
 }
 
 .space-current {

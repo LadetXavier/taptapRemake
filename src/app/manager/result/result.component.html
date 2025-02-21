@@ -1,3 +1,4 @@
 <p>{{timer | timerInSec:1}} sec</p>
 <p> {{((listManagerProperty.currentLetter+1)/ timer) | timerInSec:1}} letter/sec</p>
+<p>Nombre d'erreurs : {{fails}}</p>
 <input #restartRef type="button" value="Recommencer" (click)="restart()">

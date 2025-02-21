@@ -19,6 +19,8 @@ export class ManagerComponent implements OnInit {
   isEnded: boolean = false;
   timer: number = 0.0;
   intervalToClear:any = null;
+  numberFail: number = 0;
+  isCode:boolean = false;
 
   ngOnInit(): void {
     this.listManagerProperty = this.listManager.listProperty;
@@ -26,7 +28,14 @@ export class ManagerComponent implements OnInit {
 
   onStart = ($event:MouseEvent) => {
     ($event.target as HTMLButtonElement).blur();
+    this.isCode=false;
     this.startGame();
+  }
+
+  onCode = ($event:MouseEvent) => {
+    ($event.target as HTMLButtonElement).blur();
+    this.isCode=true;
+    this.startCode();
   }
 
   onStopTimer = () => {
@@ -38,25 +47,45 @@ export class ManagerComponent implements OnInit {
     this.isStarted = true;
     this.isEnded = false;
     this.timer = 0;
+    this.numberFail = 0;
     this.onStopTimer();
+  }
+
+   startCode = () => {
+    this.listManager.generateCode();
+    this.isStarted = true;
+    this.isEnded = false;
+    this.timer = 0;
+    this.numberFail = 0;
+    this.onStopTimer();
+  }
+
+  onGameRestart = () => {
+    this.isEnded = false;
+    this.isStarted = false;
   }
 
   // Game related method
 
   onKeyType = (event:KeyboardEvent) => {
     if(this.isStarted) {
+      if(event.key === "Tab" || event.key === " ") {
+        event.preventDefault();
+      }
       this.testCurrentLetter(event.key);
     }
   }
 
   testCurrentLetter = (letterToTest:string) => {
+
     if(this.listManagerProperty.currentLetter === 0 && this.timer===0)  {
+      this.onStopTimer();
       this.startTimer();
     }
-    if(this.listManagerProperty.isStrict) {
-
+     if(letterToTest === "Alt" ||  letterToTest === "AltGraph" || letterToTest === "Control" || letterToTest === "Shift") {
+      return true;
     }
-    if(this.listManagerProperty.listLetter[this.listManagerProperty.currentLetter]===letterToTest
+    else if(this.listManagerProperty.listLetter[this.listManagerProperty.currentLetter]===letterToTest
       && ((this.listManagerProperty.isStrict && !this.listManagerProperty.isFailing) || !this.listManagerProperty.isStrict)) {
        if(this.listManagerProperty.currentLetter === this.listManagerProperty.listLetter.length-1)  {
         this.isEnded = true;
@@ -77,6 +106,7 @@ export class ManagerComponent implements OnInit {
       }
       else {
         this.listManagerProperty.isFailing = true;
+        this.numberFail++;
       }
       return false;
     }

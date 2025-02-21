@@ -1,5 +1,6 @@
 import { Injectable, OnInit } from '@angular/core';
 import * as defaultPreset from "./preset.json";
+import data from "./codeExampleData.json"; // Sanitize with https://tomeko.net/online_tools/cpp_text_escape.php?lang=en
 
 export interface ListProperty {
   isFailing : boolean;
@@ -37,7 +38,6 @@ export class ListManagerService {
 
   tempJson = defaultPreset as unknown;
   presetJson = this.tempJson as { defaultPreset:[PresetList]};
-
   generateList = () => {
     //reset of UI
     this.listProperty.isFailing = false;
@@ -47,11 +47,13 @@ export class ListManagerService {
 
     // space iterator to add space with random interval
     let spaceIterator = 0;
+    let enterIterator = 0;
 
     for(let i=0; i < this.listProperty.length ; i++) {
       // randomise letter in the array of possible letter
       this.listProperty.listLetter[i]= this.listProperty.listPossibleLetter[Math.floor(Math.random()*this.listProperty.listPossibleLetter.length)];
       spaceIterator++;
+      enterIterator++;
       // logic for adding space and having an hard cap every 7 letter
       if(i+2 < this.listProperty.length) {
         if(spaceIterator === 7) {
@@ -68,7 +70,37 @@ export class ListManagerService {
         }
       }
 
+
+      // logic for adding break line and having an hard cap every 25 letter
+      if(i+4 < this.listProperty.length && i > 8) {
+        if(enterIterator === 25) {
+          this.listProperty.listLetter[i+1]= 'Enter';
+          enterIterator=0;
+          i++;
+        } else {
+          let randomEnter = Math.random()*25;
+          if( randomEnter < 1 && enterIterator > 5) {
+            this.listProperty.listLetter[i+1]= 'Enter';
+            enterIterator=0;
+            i++;
+          }
+        }
+      }
+
     }
+  }
+
+  generateCode = () => {
+    //reset of UI
+    this.listProperty.isFailing = false;
+    this.listProperty.currentLetter = 0;
+    this.listProperty.listLetter = [];
+
+    this.listProperty.listLetter = data.code[Math.floor(Math.random()*data.code.length)].split("");
+    this.listProperty.listLetter.forEach( (item,i) => {
+      if(item === "\n") this.listProperty.listLetter[i] = "Enter";
+      else if(item === "\t") this.listProperty.listLetter[i] = "Tab";
+    })
   }
 
   seeList = () => {
@@ -95,7 +127,6 @@ export class ListManagerService {
       tempListPossibleLetter = [];
     }
     this.listProperty.listPossibleLetter = tempListPossibleLetter;
-    console.log(this.listProperty.listPossibleLetter);
   }
 
 

@@ -10,6 +10,7 @@ export class ResultComponent implements OnInit,AfterViewInit {
 
   @Input() timer:number = 0;
   @Input() restart:Function = () => {};
+  @Input() fails:number = 0;
   listManagerProperty: ListProperty | any = {};
   @ViewChildren("restartRef") viewRestart!: QueryList<ElementRef>;
 
