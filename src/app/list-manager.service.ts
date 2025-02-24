@@ -7,11 +7,12 @@ export interface ListProperty {
   currentLetter : number;
   listLetter : string[];
   listPossibleLetter : string[];
+  tempList: string[];
   length:number;
   isStrict:boolean;
 }
 
-export interface PresetList {
+export interface Preset {
   name: string,
   list: string[]
 }
@@ -24,7 +25,7 @@ export interface PresetList {
 export class ListManagerService {
 
   constructor() {
-    this.loadDefaultPreset("only LowerCase");
+    this.loadDefaultPreset(this.nameDefaultPreset);
   }
 
   listProperty:ListProperty = {
@@ -33,11 +34,16 @@ export class ListManagerService {
     listLetter: [],
     listPossibleLetter: [],
     length: 60,
+    tempList: [],
     isStrict:false
   }
 
   tempJson = defaultPreset as unknown;
-  presetJson = this.tempJson as { defaultPreset:[PresetList]};
+  presetJson = this.tempJson as { defaultPreset:[Preset]};
+  nameDefaultPreset : string = "Only LowerCase";
+
+
+
   generateList = () => {
     //reset of UI
     this.listProperty.isFailing = false;
@@ -104,20 +110,23 @@ export class ListManagerService {
   }
 
   seeList = () => {
-    console.log(this.listProperty.listPossibleLetter);
+
   }
 
   addLetter = (letter:string):void => {
-    this.listProperty.listPossibleLetter.push(letter);
+    this.listProperty.tempList.push(letter);
+
+
   }
    removeLetter = (letter:string):void => {
-    let index = this.listProperty.listPossibleLetter.indexOf(letter);
-    this.listProperty.listPossibleLetter.splice(index,1);
+    let index = this.listProperty.tempList.indexOf(letter);
+    this.listProperty.tempList.splice(index,1);
   }
 
    nextLetter= () => {
     this.listProperty.currentLetter+=1;
   }
+
   loadDefaultPreset = (namePreset:string) => {
 
     let tempListPossibleLetter = this.presetJson.defaultPreset.find( e => {
@@ -127,6 +136,39 @@ export class ListManagerService {
       tempListPossibleLetter = [];
     }
     this.listProperty.listPossibleLetter = tempListPossibleLetter;
+    this.listProperty.tempList = [...tempListPossibleLetter];
+
+    for(let i=0; i < this.presetJson.defaultPreset.length;i++){
+      if(localStorage.getItem(this.presetJson.defaultPreset[i].name) === null){
+        localStorage.setItem(this.presetJson.defaultPreset[i].name,JSON.stringify(this.presetJson.defaultPreset[i].list));
+      }
+    }
+  }
+
+  loadPreset = (name:string) => {
+    let tempListPossibleLetter = JSON.parse(localStorage.getItem(name)!);
+    this.listProperty.listPossibleLetter = tempListPossibleLetter;
+    this.listProperty.tempList = [...tempListPossibleLetter];
+  }
+
+  savePreset = (presetToSave:string) => {
+    if(presetToSave !== '') {
+       localStorage.setItem(presetToSave,JSON.stringify(this.listProperty.tempList));
+    }
+  }
+
+  lookLocalStorage = () => {
+    console.log("local storage");
+    for (let i = 0; i < localStorage.length; i++)   {
+      if(localStorage.key(i)!== null) {
+        console.log(localStorage.key(i));
+        console.log(JSON.parse(localStorage.getItem(localStorage.key(i)!)!));
+      }
+    }
+  }
+
+  saveChange = () => {
+    this.listProperty.listPossibleLetter = [...this.listProperty.tempList];
   }
 
 

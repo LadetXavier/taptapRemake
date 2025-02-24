@@ -28,21 +28,25 @@
   >
   </app-key>
 </div>
+    <div class="save-change">
+      <input type="button" value="Save Change" (click)="listManagerPublic.saveChange()">
+    </div>
 
-<tabs classPattern="small-tab">
-  <tab tabTitle="Loading Preset">
-    <select name="defaultPreset" [(ngModel)]="defaultPreset">
+    <select name="actualListPreset" [(ngModel)]="loadPresetName">
       <option value="" selected disabled>Choose a preset</option>
-      <option *ngFor="let preset of listManagerPublic.presetJson.defaultPreset" [value]="preset.name">{{preset.name}}
+      <option *ngFor="let preset of listPresetAvailable" [value]="preset">{{preset}}
       </option>
     </select>
-    <input type="button" value="Load Preset" id="loadDefaultPresetButton"
-      (click)="listManagerPublic.loadDefaultPreset(defaultPreset)">
-  </tab>
-  <tab tabTitle="Saving Preset">
-    2
-  </tab>
-</tabs>
+    <input type="button" value="Load Preset" id="loadPresetButton"
+      (click)="loadPreset(loadPresetName)">
+      <div class="name-preset">
+        <input type="text" name="presetName" [(ngModel)]="savePresetName">
+      </div>
+    <input type="button" value="Save Preset" id="SavePresetButton"
+      (click)="savePreset(savePresetName)">
+
+
+
 
 
 </div>

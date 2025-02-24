@@ -55,7 +55,7 @@ export class KeyComponent implements OnInit {
   altGrValueAdded: boolean = false;
 
   ngDoCheck() {
-    if(this.listManagerProperty.listPossibleLetter !== undefined) {
+    if(this.listManagerProperty.tempList !== undefined) {
       this.alreadyActive();
     }
 
@@ -95,18 +95,18 @@ export class KeyComponent implements OnInit {
   }
 
   alreadyActive = () => {
-    if(this.listManagerProperty.listPossibleLetter.indexOf(this.keyData.normalValue) !== -1) {
+    if(this.listManagerProperty.tempList.indexOf(this.keyData.normalValue) !== -1) {
       this.normalValueAdded=true;
     }
     else {
       this.normalValueAdded=false;
     }
-     if(this.listManagerProperty.listPossibleLetter.indexOf(this.keyData.majValue) !== -1) {
+     if(this.listManagerProperty.tempList.indexOf(this.keyData.majValue) !== -1) {
       this.upperValueAdded=true;
     } else {
       this.upperValueAdded=false;
     }
-     if(this.listManagerProperty.listPossibleLetter.indexOf(this.keyData.altGr) !== -1) {
+     if(this.listManagerProperty.tempList.indexOf(this.keyData.altGr) !== -1) {
       this.altGrValueAdded=true;
     } else {
       this.altGrValueAdded=false;
